@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "39294052809",
+    "firebase_url": "https://monitorhewan.firebaseio.com",
+    "project_id": "monitorhewan",
+    "storage_bucket": "monitorhewan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39294052809:android:c92205267424ddbc8c6018",
+        "android_client_info": {
+          "package_name": "com.rizkyghofur.monitorhewan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39294052809-su3e2o9fjp4fq2eaumu8r97lidl4lqnj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rizkyghofur.monitorhewan",
+            "certificate_hash": "c1bafe7838ba9a55645285d068cd1de8f83819de"
+          }
+        },
+        {
+          "client_id": "39294052809-993a0k201dpkqkihe19f5f176of687hq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsfo6xT_T7VigH5WZ2mIsyF8X20cGlSy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39294052809-993a0k201dpkqkihe19f5f176of687hq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
