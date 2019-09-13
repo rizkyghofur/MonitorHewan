@@ -1,119 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/list_item"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#FFFFFF"
-    android:gravity="center"
-    android:orientation="horizontal">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundgradient">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/datalist"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="6dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginStart="6dp">
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:fastScrollEnabled="true"
+        app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
+        app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+        app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
+        app:fastScrollVerticalTrackDrawable="@drawable/line_drawable"
+        />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/termo"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/thermometer"/>
-
-            <TextView
-            android:id="@+id/suhu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Suhu :"
-            android:layout_marginRight="220dp"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/gfsuhu"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:background="@drawable/rounded_button"
-            android:text="Grafik" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/humi"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/humidity"/>
-
-            <TextView
-                android:id="@+id/lmb"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Kelembaban :"
-                android:layout_marginRight="155dp"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/gflmb"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:background="@drawable/rounded_button"
-                android:text="Grafik" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/loc"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/placeholder"/>
-
-            <TextView
-                android:id="@+id/lok"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Lat. &amp; Long. :"
-                android:layout_marginRight="159dp"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/gflok"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:background="@drawable/rounded_button"
-                android:text="Lokasi" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
