@@ -63,7 +63,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/termo"
+                android:id="@+id/picsuhu"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/thermometer" />
@@ -97,13 +97,13 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/humi"
+                android:id="@+id/picdtkjtg"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/humidity" />
+                android:src="@drawable/cardio" />
 
             <TextView
-                android:id="@+id/lmb"
+                android:id="@+id/dtkjtg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -113,7 +113,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/gflmb"
+                android:id="@+id/gfkdtkjtg"
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_button"
@@ -130,13 +130,13 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/loc"
+                android:id="@+id/piclatlong"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/placeholder" />
 
             <TextView
-                android:id="@+id/lok"
+                android:id="@+id/latlong"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -146,7 +146,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/gflok"
+                android:id="@+id/gfklatlong"
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_button"
