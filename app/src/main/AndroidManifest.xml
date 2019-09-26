@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".DetakJantung"></activity>
         <activity android:name=".Koordinat" />
-        <activity android:name=".GrafikSuhu"></activity>
+        <activity android:name=".Suhu"></activity>
         <activity android:name=".MonitorActivity"></activity>
     </application>
 

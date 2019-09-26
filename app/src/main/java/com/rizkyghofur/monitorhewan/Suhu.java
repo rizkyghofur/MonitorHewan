@@ -13,7 +13,7 @@ import lecho.lib.hellocharts.model.PointValue;
 import lecho.lib.hellocharts.model.Viewport;
 import lecho.lib.hellocharts.view.LineChartView;
 
-public class GrafikSuhu extends AppCompatActivity {
+public class Suhu extends AppCompatActivity {
 
         LineChartView lineChartView;
         String[] axisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
@@ -23,7 +23,7 @@ public class GrafikSuhu extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_grafik_suhu);
+            setContentView(R.layout.activity_suhu);
 
             lineChartView = findViewById(R.id.chart);
 

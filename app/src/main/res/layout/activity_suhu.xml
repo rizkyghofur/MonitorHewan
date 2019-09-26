@@ -4,7 +4,7 @@
     android:background="@drawable/backgroundgradient"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GrafikSuhu">
+    tools:context=".Suhu">
 
     <lecho.lib.hellocharts.view.LineChartView
         android:id="@+id/chart"
