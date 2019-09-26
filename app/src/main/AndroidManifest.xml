@@ -9,17 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Koordinat"></activity>
-        <activity android:name=".GrafikLembab">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-        <activity android:name=".GrafikSuhu">
-        </activity>
-        <activity android:name=".MonitorActivity">
-        </activity>
+        <activity android:name=".DetakJantung"></activity>
+        <activity android:name=".Koordinat" />
+        <activity android:name=".GrafikSuhu"></activity>
+        <activity android:name=".MonitorActivity"></activity>
     </application>
 
 </manifest>
