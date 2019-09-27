@@ -26,8 +26,9 @@
 
             <TextView
                 android:id="@+id/iddev"
-                android:layout_width="111dp"
+                android:layout_width="363dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginRight="250dp"
                 android:text="ID Device : "
@@ -43,15 +44,16 @@
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tgl"
-            android:layout_width="111dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginRight="250dp"
-            android:text="Tanggal : "
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tgl"
+                android:layout_width="366dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="240dp"
+                android:text="Tanggal : "
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -70,10 +72,10 @@
 
             <TextView
                 android:id="@+id/suhu"
-                android:layout_width="match_parent"
+                android:layout_width="174dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="181dp"
+                android:layout_marginRight="0dp"
                 android:text="Suhu :"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -104,11 +106,11 @@
 
             <TextView
                 android:id="@+id/dtkjtg"
-                android:layout_width="match_parent"
+                android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="96dp"
-                android:text="Detak Jantung :"
+                android:layout_marginRight="0dp"
+                android:text="Detak Jantung : "
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -137,10 +139,10 @@
 
             <TextView
                 android:id="@+id/latlong"
-                android:layout_width="match_parent"
+                android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="119dp"
+                android:layout_marginRight="0dp"
                 android:text="Lat. &amp; Long. :"
                 android:textSize="20sp"
                 android:textStyle="bold" />
