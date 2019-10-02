@@ -1,10 +1,15 @@
 package com.rizkyghofur.monitorhewan;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
@@ -34,9 +39,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         holder.Tanggal.setText("Tanggal : "+TanggalBaru);
         holder.Id.setText("ID Device : "+IdBaru);
-        holder.Suhu.setText("Suhu : "+SuhuBaru + "°C");
-        holder.DetakJantung.setText("Detak Jantung : \n"+DetakJantungBaru + " Detak/Menit");
-        holder.Latlong.setText("Lokasi : \n"+LatLongBaru);
+        holder.Suhu.setText("Suhu : "+SuhuBaru);
+        holder.DetakJantung.setText("Detak Jantung : "+DetakJantungBaru);
+        holder.Latlong.setText("Lokasi : "+LatLongBaru);
 
     }
 
@@ -49,6 +54,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         private TextView Tanggal, Id, Suhu, DetakJantung, Latlong;
 
+        private Button btnSuhu, btnJantung, btnMap;
+
         ViewHolder(View itemView) {
             super(itemView);
             Tanggal = itemView.findViewById(R.id.tgl);
@@ -56,6 +63,44 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             Suhu = itemView.findViewById(R.id.suhu);
             DetakJantung = itemView.findViewById(R.id.dtkjtg);
             Latlong = itemView.findViewById(R.id.latlong);
+
+            btnSuhu = itemView.findViewById(R.id.gfsuhu);
+            btnJantung = itemView.findViewById(R.id.gfkdtkjtg);
+            btnMap = itemView.findViewById(R.id.gfklatlong);
+
+            btnSuhu.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+
+                    Toast.makeText(v.getContext(),"Button Suhu "+position, Toast.LENGTH_LONG).show();
+
+                    Context context = v.getContext();
+                    int SuhuBaru = listData.get(position).getSuhu();
+                    Intent intent = new Intent(context, Suhu.class);
+                    intent.putExtra("nilai_suhu", SuhuBaru);
+                    intent.putExtra("nilai_X", "A");
+                    context.startActivity(intent);
+                }
+            });
+
+            btnJantung.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+
+                    Toast.makeText(v.getContext(),"Button Jantung "+position, Toast.LENGTH_LONG).show();
+                }
+            });
+
+            btnMap.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+
+                    Toast.makeText(v.getContext(),"Button Jantung "+position, Toast.LENGTH_LONG).show();
+                }
+            });
         }
     }
 }
