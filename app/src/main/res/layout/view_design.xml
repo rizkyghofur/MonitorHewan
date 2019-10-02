@@ -29,10 +29,9 @@
                 android:layout_width="363dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="4dp"
                 android:layout_marginRight="250dp"
                 android:text="ID Device : "
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -49,10 +48,9 @@
                 android:layout_width="366dp"
                 android:layout_marginLeft="5dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:layout_marginRight="240dp"
                 android:text="Tanggal : "
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -77,7 +75,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginRight="0dp"
                 android:text="Suhu :"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <Button
@@ -108,15 +106,15 @@
                 android:id="@+id/dtkjtg"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:layout_marginRight="0dp"
                 android:text="Detak Jantung : "
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/gfkdtkjtg"
                 android:layout_width="75dp"
+                android:layout_marginTop="6dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_button"
                 android:text="Grafik"
@@ -141,16 +139,16 @@
                 android:id="@+id/latlong"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:layout_marginRight="0dp"
                 android:text="Lat. &amp; Long. :"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/gfklatlong"
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
                 android:background="@drawable/rounded_button"
                 android:text="Lokasi"
                 android:textColor="#FFFFFF" />
