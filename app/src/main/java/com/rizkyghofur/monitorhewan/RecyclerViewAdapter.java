@@ -1,7 +1,6 @@
 package com.rizkyghofur.monitorhewan;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,9 +34,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         holder.Tanggal.setText("Tanggal : "+TanggalBaru);
         holder.Id.setText("ID Device : "+IdBaru);
-        holder.Suhu.setText("Suhu : "+SuhuBaru);
-        holder.DetakJantung.setText("Detak Jantung : "+DetakJantungBaru);
-        holder.Latlong.setText("Lokasi : "+LatLongBaru);
+        holder.Suhu.setText("Suhu : "+SuhuBaru + "°C");
+        holder.DetakJantung.setText("Detak Jantung : \n"+DetakJantungBaru + " Detak/Menit");
+        holder.Latlong.setText("Lokasi : \n"+LatLongBaru);
 
     }
 
