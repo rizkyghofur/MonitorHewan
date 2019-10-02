@@ -1,6 +1,8 @@
 package com.rizkyghofur.monitorhewan;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import java.util.ArrayList;
@@ -18,7 +20,7 @@ public class Suhu extends AppCompatActivity {
         LineChartView lineChartView;
         String[] axisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
                 "Oct", "Nov", "Dec"};
-        int[] yAxisData = {50, 20, 15, 30, 20, 60, 15, 40, 45, 10, 90, 18};
+        int[] yAxisData = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,18 @@ public class Suhu extends AppCompatActivity {
             for (int i = 0; i < yAxisData.length; i++) {
                 yAxisValues.add(new PointValue(i, yAxisData[i]));
             }
+
+            //Mengambil data dari intent
+            Intent mIntent = getIntent();
+            int suhuBaru = mIntent.getIntExtra("nilai_suhu", 0);
+            String labelBaru = mIntent.getStringExtra("nilai_x");
+
+            int index_terakhir = axisData.length-1;
+
+            axisValues.add(index_terakhir, new AxisValue(index_terakhir).setLabel(labelBaru));
+            yAxisValues.add(new PointValue(index_terakhir, suhuBaru));
+
+
 
             List lines = new ArrayList();
             lines.add(line);
