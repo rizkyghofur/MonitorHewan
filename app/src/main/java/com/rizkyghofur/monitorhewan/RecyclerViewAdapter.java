@@ -33,9 +33,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         final String TanggalBaru = listData.get(position).getTanggal();
         final int IdBaru = listData.get(position).getId();
-        final int SuhuBaru = listData.get(position).getSuhu();
+        final double SuhuBaru = listData.get(position).getSuhu();
         final int DetakJantungBaru = listData.get(position).getDetakJantung();
-        final Long LatLongBaru = listData.get(position).getLatlong();
+        final double Lat = listData.get(position).getLat();
+        final double Log = listData.get(position).getLog();
+
+        String LatLongBaru = String.format("%.2f", Lat) + ", " + String.format("%.2f", Log);
 
         holder.Tanggal.setText("Tanggal : "+TanggalBaru);
         holder.Id.setText("ID Device : "+IdBaru);
@@ -56,7 +59,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         private Button btnSuhu, btnJantung, btnMap;
 
-        ViewHolder(View itemView) {
+        ViewHolder(final View itemView) {
             super(itemView);
             Tanggal = itemView.findViewById(R.id.tgl);
             Id = itemView.findViewById(R.id.iddev);
@@ -76,11 +79,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     Toast.makeText(v.getContext(),"Button Suhu "+position, Toast.LENGTH_LONG).show();
 
                     Context context = v.getContext();
-                    int SuhuBaru = listData.get(position).getSuhu();
+                    double SuhuBaru = listData.get(position).getSuhu();
                     Intent intent = new Intent(context, Suhu.class);
                     intent.putExtra("nilai_suhu", SuhuBaru);
-                    intent.putExtra("nilai_X", "A");
+                    intent.putExtra("nilai_x", "13");
                     context.startActivity(intent);
+
+
                 }
             });
 
