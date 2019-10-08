@@ -17,8 +17,8 @@ import lecho.lib.hellocharts.view.LineChartView;
 public class Suhu extends AppCompatActivity {
 
     LineChartView lineChartView;
-    String[] axisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
-            "Oct", "Nov", "Dec"};
+    String[] axisData = {"1", "2", "3", "4", "5", "6", "7", "8", "9",
+            "10", "11", "12"};
     int[] yAxisData = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     @Override
@@ -44,7 +44,7 @@ public class Suhu extends AppCompatActivity {
 
         //Mengambil data dari intent
         Intent mIntent = getIntent();
-        int suhuBaru = mIntent.getIntExtra("nilai_suhu", 0);
+        float suhuBaru = (float) mIntent.getDoubleExtra("nilai_suhu", 0);
         String labelBaru = mIntent.getStringExtra("nilai_x");
 
         int index_terakhir = axisData.length-1;

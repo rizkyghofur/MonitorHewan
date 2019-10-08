@@ -79,14 +79,16 @@ public class MonitorActivity extends AppCompatActivity{
         }, 2000);
     }
 
+    //Methode yang berisi kumpulan baris kode untuk mengatur RecyclerView
     private void MyRecyclerView(){
+        //Menggunakan Layout Manager, Dan Membuat List Secara Vertical
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
 
+        //Membuat Underline pada Setiap Item Didalam List
         DividerItemDecoration itemDecoration = new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL);
         itemDecoration.setDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.line));
         recyclerView.addItemDecoration(itemDecoration);
     }
-
 }
