@@ -3,22 +3,26 @@
     package="com.rizkyghofur.monitorhewan">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetakJantung"></activity>
-        <activity android:name=".Koordinat" />
-        <activity android:name=".Suhu"></activity>
-        <activity android:name=".MonitorActivity">
+        <activity android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".DetakJantung" />
+        <activity android:name=".Koordinat" />
+        <activity android:name=".Suhu" />
+        <activity android:name=".MonitorActivity" />
     </application>
 
 </manifest>
