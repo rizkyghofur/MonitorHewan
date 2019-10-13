@@ -43,7 +43,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.Tanggal.setText("Tanggal : "+TanggalBaru);
         holder.Id.setText("ID Device : "+IdBaru);
         holder.Suhu.setText("Suhu : "+SuhuBaru+ "°C");
-        holder.DetakJantung.setText("Detak Jantung : \n"+DetakJantungBaru + " detak per menit");
+        holder.DetakJantung.setText("Detak Jantung : \n"+DetakJantungBaru + " bpm");
         holder.Latlong.setText("Lokasi : \n"+LatLongBaru);
 
     }
