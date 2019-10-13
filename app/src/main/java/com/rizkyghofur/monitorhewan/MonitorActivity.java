@@ -6,11 +6,10 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.ContactsContract;
 import android.util.Log;
 import android.widget.Toast;
 import com.google.firebase.database.DataSnapshot;
@@ -18,27 +17,24 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class MonitorActivity extends AppCompatActivity{
+public class MonitorActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private DatabaseReference databaseReference;
     private ArrayList<DatabaseHelper> listData;
-
+    SwipeRefreshLayout mSwipeRefreshLayout;
 
     JSONParser jParser = new JSONParser();
     String url_all_products = "http://ghwibowo.net/monitoring_hewan/get_hewan.php";
-
 
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_DATA = "data";
@@ -63,6 +59,21 @@ public class MonitorActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monitor);
         recyclerView = findViewById(R.id.datalist);
+        mSwipeRefreshLayout = findViewById(R.id.swipeToRefresh);
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.colorAccent);
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mSwipeRefreshLayout.setRefreshing(false);
+                    new get_data_hewan();
+                }
+            },1000);
+        }
+    });
+
         MyRecyclerView();
 //        GetData();
         data_hewan = new ArrayList<>();
@@ -151,7 +162,7 @@ public class MonitorActivity extends AppCompatActivity{
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            Toast.makeText(MonitorActivity.this, "Downloading data ...", Toast.LENGTH_LONG).show();
+            Toast.makeText(MonitorActivity.this, "Sedang mengunduh data...", Toast.LENGTH_LONG).show();
         }
 
         @Override
