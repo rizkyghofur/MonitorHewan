@@ -73,6 +73,7 @@
                 android:layout_width="174dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="0dp"
                 android:text="Suhu :"
                 android:textSize="18sp"
@@ -106,6 +107,7 @@
                 android:id="@+id/dtkjtg"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="0dp"
                 android:text="Detak Jantung : "
                 android:textSize="18sp"
@@ -140,6 +142,7 @@
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="0dp"
+                android:layout_marginLeft="10dp"
                 android:text="Lat. &amp; Long. :"
                 android:textSize="18sp"
                 android:textStyle="bold" />
